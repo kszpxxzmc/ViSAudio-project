@@ -255,13 +255,118 @@
         </div>
         <br/>
         
-        <!-- Method -->
-        <h2 class="title is-3">GenDoP Method</h2>
+        <!-- BiAudio Dataset -->
+        <h2 class="title is-3">BiAudio Dataset</h2>
         <div class="content has-text-justified">
-          <img src="./static/images/network1_00.png"/>
           <p>
-            <b>Our Auto-regressive Generation Model.</b> 
-            Our model supports multi-modal inputs and generates trajectories based on these inputs. By treating the task as an auto-regressive next-token prediction problem, the model sequentially generates trajectories, with each new pose prediction influenced by previous camera states and input conditions.
+            <b>BiAudio Dataset.</b>
+            Comparison between BiAudio and existing binaural audio-video datasets. FoV and 360&deg; denote Field-of-View and panoramic videos, respectively, while FOA stands for First-order Ambisonics. BiAudio is currently the largest video-binaural audio dataset, featuring open-domain sounds from diverse real-world environments and varied camera rotation trajectories, enabling audio generation beyond fixed viewpoints. Rich captions allow modeling of subtle environmental sounds, producing more realistic audio.
+          </p>
+          <table class="table is-striped is-fullwidth">
+            <thead>
+              <tr>
+                <th rowspan="2">Dataset</th>
+                <th colspan="2">Statistic</th>
+                <th colspan="4">Data Type</th>
+                <th colspan="2">Caption</th>
+                <th rowspan="2">Camera Viewpoint</th>
+              </tr>
+              <tr>
+                <th>#Clips</th>
+                <th>Duration</th>
+                <th>Video Type</th>
+                <th>Open Domain</th>
+                <th>Real-world</th>
+                <th>FOA</th>
+                <th>Visible</th>
+                <th>Invisible</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>OAP</td>
+                <td>64k</td>
+                <td>26h</td>
+                <td>360&deg;</td>
+                <td>Street</td>
+                <td>&#10003;</td>
+                <td>&times;</td>
+                <td>&times;</td>
+                <td>&times;</td>
+                <td>Fixed</td>
+              </tr>
+              <tr>
+                <td>Fair-Play</td>
+                <td>1.9k</td>
+                <td>5.2h</td>
+                <td>FoV</td>
+                <td>Music</td>
+                <td>&#10003;</td>
+                <td>&times;</td>
+                <td>&times;</td>
+                <td>&times;</td>
+                <td>Fixed</td>
+              </tr>
+              <tr>
+                <td>SimBinaural</td>
+                <td>22k</td>
+                <td>116.1h</td>
+                <td>FoV</td>
+                <td>Music</td>
+                <td>&times;</td>
+                <td>&times;</td>
+                <td>&times;</td>
+                <td>&times;</td>
+                <td>Fixed</td>
+              </tr>
+              <tr>
+                <td>MUSIC-21</td>
+                <td>1.7k</td>
+                <td>81h</td>
+                <td>FoV</td>
+                <td>Music</td>
+                <td>&#10003;</td>
+                <td>&times;</td>
+                <td>&#10003;</td>
+                <td>&times;</td>
+                <td>Fixed</td>
+              </tr>
+              <tr>
+                <td>YouTube-Binaural</td>
+                <td>0.4k</td>
+                <td>27h</td>
+                <td>FoV</td>
+                <td>&#10003;</td>
+                <td>&#10003;</td>
+                <td>&times;</td>
+                <td>&times;</td>
+                <td>&times;</td>
+                <td>Fixed</td>
+              </tr>
+              <tr>
+                <td><b>BiAudio (Ours)</b></td>
+                <td><b>97k</b></td>
+                <td><b>215h</b></td>
+                <td><b>FoV</b></td>
+                <td>&#10003;</td>
+                <td>&#10003;</td>
+                <td>&#10003;</td>
+                <td>&#10003;</td>
+                <td>&#10003;</td>
+                <td><b>Moving</b></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        
+        <!-- Method -->
+        <h2 class="title is-3">ViSAudio Method</h2>
+        <div class="content has-text-justified">
+          <img src="./static/images/network.jpg"/>
+          <p>
+            <b>Our ViSAudio Network Architecture.</b>
+            <b>Left:</b> We adopt <i>Dual-Branch Audio Generation</i>, where two dedicated branches independently predict the left and right audio flows.
+            <b>Right:</b> A <i>Conditional Spacetime Module</i> extracts spatiotemporal cues from the video and injects them into the generation process, improving spatio-temporal alignment between audio and video.
           </p>
         </div>
   </div>
