@@ -164,7 +164,7 @@
               </span>
               <!-- Video Link. -->
               <span class="link-block">
-                <a href="https://www.youtube.com/watch?v=UWvR_A7yFeI"
+                <a href=""
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-youtube"></i>
@@ -209,16 +209,11 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Camera trajectory design plays a crucial role in video production, serving as a fundamental tool for conveying directorial intent and enhancing visual storytelling. In cinematography, Directors of Photography meticulously craft camera movements to achieve expressive and intentional framing. However, existing methods for camera trajectory generation remain limited: Traditional approaches rely on geometric optimization or handcrafted procedural systems, while recent learning-based methods often inherit structural biases or lack textual alignment, constraining creative synthesis.
-          </p>
-          <p>
-            In this work, we introduce an auto-regressive model inspired by the expertise of Directors of Photography to generate artistic and expressive camera trajectories.
-            We first introduce <b>DataDoP</b>, a large-scale multi-modal dataset containing 29K real-world shots with free-moving camera trajectories, depth maps, and detailed captions in specific movements, interaction with the scene, and directorial intent.
-          </p>
-          <p>
-            Thanks to the comprehensive and diverse database, we further train an auto-regressive, decoder-only Transformer for high-quality, context-aware camera movement generation based on text guidance and RGBD inputs, named <b>GenDoP</b>. Extensive experiments demonstrate that compared to existing methods, GenDoP offers better controllability, finer-grained trajectory adjustments, and higher motion stability. 
-            We believe our approach establishes a new standard for learning-based cinematography, paving the way for future advancements in camera control and filmmaking. Our code and data will be publicly available.
-          </p>
+            Despite progress in video-to-audio generation, the field focuses predominantly on mono output, lacking spatial immersion. Existing binaural approaches remain constrained by a two-stage pipeline that first generates mono audio and then performs spatialization, often resulting in error accumulation and spatio-temporal inconsistencies.
+            To address this limitation, we introduce the task of <b>end-to-end binaural spatial audio generation</b> directly from silent video. To support this task, we present the <b>BiAudio</b> dataset, comprising approximately 97K video-binaural audio pairs spanning diverse real-world scenes and camera rotation trajectories, constructed through a semi-automated pipeline.
+            Furthermore, we propose <b>ViSAudio</b>, an end-to-end framework that employs conditional flow matching with a dual-branch audio generation architecture, where two dedicated branches model the audio latent flows. Integrated with a conditional spacetime module, it balances consistency between channels while preserving distinctive spatial characteristics, ensuring precise spatio-temporal alignment between audio and the input video.
+            Comprehensive experiments demonstrate that ViSAudio outperforms existing state-of-the-art methods across both objective metrics and subjective evaluations, generating high-quality binaural audio with spatial immersion that adapts effectively to viewpoint changes, sound-source motion, and diverse acoustic environments.   
+              </p>
         </div>
       </div>
     </div>
@@ -561,15 +556,15 @@
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
-    <pre><code>@misc{zhang2025gendopautoregressivecameratrajectory,
+    <pre><code>
+      <!-- @misc{zhang2025gendopautoregressivecameratrajectory,
       title={GenDoP: Auto-regressive Camera Trajectory Generation as a Director of Photography}, 
       author={Mengchen Zhang and Tong Wu and Jing Tan and Ziwei Liu and Gordon Wetzstein and Dahua Lin},
       year={2025},
       eprint={2504.07083},
       archivePrefix={arXiv},
       primaryClass={cs.CV},
-      url={https://arxiv.org/abs/2504.07083}, 
-}
+      url={https://arxiv.org/abs/2504.07083}, } -->
 </code></pre>
   </div>
 </section>
