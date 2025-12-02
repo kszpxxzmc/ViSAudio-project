@@ -377,6 +377,12 @@
     justify-content: space-between;
     gap: 12px;
   }
+  .video-grid video {
+    width: 48%;
+    object-fit: cover;      /* 裁剪多余部分 */
+    border-radius: 15px;    /* 圆角效果 */
+    border: 3px solid #fff; /* 白色边框 */
+  }
   .video-grid .video-item {
     width: 48%;
     text-align: center;
@@ -400,7 +406,7 @@
     <!-- Dynamic Sound Sources -->
     <h3 class="title is-4">Dynamic Sound Sources</h3>
     <p>
-      We showcase dynamic sound sources where objects, cameras, or both are fixed or moving, demonstrating ViSAudio's ability to maintain stable and coherent spatial audio under complex viewpoint changes and sound-source motion.
+      We showcase dynamic sound sources where objects, cameras, or both are fixed or moving, demonstrating ViSAudio's ability to maintain stable and coherent spatial audio under complex <b>viewpoint changes</b> and <b>sound-source motion</b>.
     </p>
     <br/>
     <div class="video-grid">
@@ -424,7 +430,7 @@
     <!-- Multiple Sound Sources -->
     <h3 class="title is-4">Multiple Sound Sources</h3>
     <p>
-      We present scenes with multiple simultaneous sound sources, highlighting ViSAudio's accurate spatial separation, localization, and coherent binaural generation in complex sound environments.
+      We present scenes with multiple simultaneous sound sources, highlighting ViSAudio's accurate spatial separation, localization, and coherent binaural generation in <b>complex sound environments</b>.
     </p>
     <br/>
     <div class="video-grid">
@@ -446,7 +452,7 @@
     <!-- Invisible Sound Sources -->
     <h3 class="title is-4">Invisible Sound Sources</h3>
     <p>
-      We include examples with off-screen sound sources, showing that ViSAudio can infer and spatialize unseen events from video and optional text prompts.
+      We include examples with <b>off-screen sound sources</b>, showing that ViSAudio can infer and spatialize unseen events from video and optional text prompts.
     </p>
     <br/>
     <div class="video-grid">
@@ -468,7 +474,7 @@
     <!-- Diverse Acoustic Environments -->
     <h3 class="title is-4">Diverse Acoustic Environments</h3>
     <p>
-      We illustrate ViSAudio's robustness across diverse acoustic environments, including indoor, outdoor, and underwater scenes, consistently producing immersive binaural audio.
+      We illustrate ViSAudio's robustness across <b>diverse acoustic environments</b>, including indoor, outdoor, and underwater scenes, consistently producing immersive binaural audio.
     </p>
     <br/>
     <div class="video-grid">
